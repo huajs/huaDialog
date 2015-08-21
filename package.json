@@ -1,0 +1,22 @@
+{
+  "name": "huadialog",
+  "version": "1.0.0",
+  "description": "a fantastic dialog which can be used in you webapp",
+  "main": "./src/huaDialog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huajs/huaDialog.git"
+  },
+  "keywords": [
+    "dialog"
+  ],
+  "author": "puhuasheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huajs/huaDialog/issues"
+  },
+  "homepage": "https://github.com/huajs/huaDialog#readme"
+}

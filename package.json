@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a fantastic dialog which can be used in you webapp",
   "main": "./src/huaDialog.js",
+  "readmeFilename": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/huajs/huaDialog/issues"
   },
-  "homepage": "https://github.com/huajs/huaDialog#readme"
+  "homepage": "https://github.com/huajs/huaDialog#readme",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "dependencies":{
+    "grunt-cli":"*",
+    "grunt":"*",
+    "grunt-autoprefixer":"*",
+    "grunt-contrib-watch":"*",
+    "grunt-yui-compressor":"*",
+    "load-grunt-tasks":"*",
+    "grunt-contrib-less":"*"
+  }
 }

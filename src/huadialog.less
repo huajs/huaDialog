@@ -1,0 +1,72 @@
+@baseColor: #D93A21;
+@font-color: #333;
+@border-radius:3px;
+@logo:hua;
+
+
+.huadialog {
+  font-size: 14px;
+  line-height:20/14;
+  border-radius:@border-radius;
+  border:solid 1px @baseColor;
+  color:@font-color;
+}
+.huadialog-grid{
+  width: auto;
+  margin: 0;
+  border: 0 none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: transparent;
+}
+
+.huadialog-header,.huadialog-body,.huadialog-footer{
+  padding:0;
+  border:none;
+  background:transparent;
+}
+
+.huadialog-header{
+  border-bottom:solid 1px #E5E5E5;
+}
+.huadialog-body{
+  padding:15px;
+}
+.huadialog-footer{
+  padding:0 15px 15px 15px;
+}
+
+
+.huadialog-title{
+  padding:15px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.huadialog-close{
+  position: relative;
+  _position: absolute;
+  float: right;
+  top: 13px;
+  right: 13px;
+  _height: 26px;
+  padding: 0 4px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #FFF;
+  opacity: .2;
+  filter: alpha(opacity=20);
+  cursor: pointer;
+  background: transparent;
+  _background: #FFF;
+  border: 0;
+  -webkit-appearance: none;
+  outline:0;
+}
+.huadialog-close:hover{
+  opacity: .5;
+  filter: alpha(opacity=50);
+  outline:0;
+}

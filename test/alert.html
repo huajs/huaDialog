@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="../dest/huadialog.css"/>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="js/require.js"></script>
     <script type="text/javascript" src="../src/huadialog.js"></script>
 </head>
 <body>
 
-<div data-hua="dialog" class="huadialog">
-    <table class="huadialog-grid">
-        <tr>
-            <td data-hua="dialog-header" class="huadialog-header">
-                <button data-hua="dialog-close" class="huadialog-close">&#215;</button>
-                <div data-hua="dialog-title" class="huadialog-title">&nbsp;</div>
-            </td>
-        </tr>
-        <tr>
-            <td data-hua="dialog-body" class="huadialog-body">
-                <div data-hua="dialog-content" class="huadialog-content"></div>
-            </td>
-        </tr>
-        <tr>
-            <td data-hua="dialog-footer" class="huadialog-footer">
-                <div data-hua="dialog-status" class="huadialog-status"></div>
-                <div data-hua="dialog-buttons" class="huadialog-buttons"></div>
-            </td>
-        </tr>
+<div style="position:absolute;top:50%;left:50%;">
+    <div data-hua="dialog" class="huadialog">
+        <table class="huadialog-grid">
+            <tr>
+                <td data-hua="dialog-header" class="huadialog-header">
+                    <button data-hua="dialog-close" class="huadialog-close">&#215;</button>
+                    <div data-hua="dialog-title" class="huadialog-title">消息</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-hua="dialog-body" class="huadialog-body">
+                    <div data-hua="dialog-content" class="huadialog-content">风吹起的青色衣衫，夕阳里的温暖容颜，你比以前更加美丽，像盛开的花
+                        <br/>——许巍《难忘的一天》</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-hua="dialog-footer" class="huadialog-footer">
+                    <div data-hua="dialog-status" class="huadialog-status"></div>
+                    <div data-hua="dialog-buttons" class="huadialog-buttons">
+                        <button>确定</button>
+                        <button>取消</button>
+                    </div>
+                </td>
+            </tr>
 
-    </table>
+        </table>
+    </div>
 </div>
+<script>
+    $(function(){
+        $('.huadialog').addClass('huadialog-show');
+    });
+</script>
 
 </body>
 </html>

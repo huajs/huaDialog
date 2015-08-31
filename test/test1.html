@@ -15,9 +15,19 @@
         window.d=huadialog({
             title:'弹出框',
             width:'500',
+            locked:true,
+            ok:function(){
+                console.log('okClick');
+                return false;
+            },
+            cancel:function(){
+                console.log('cancelClick');
+                return false;
+            },
             content:'风吹起的青色衣衫，夕阳里的温暖容颜，你比以前更加美丽，像盛开的花<br>——许巍《难忘的一天》风吹起的青色衣衫，夕阳里的温暖容颜，你比以前更加美丽，像盛开的花<br>——许巍《难忘的一天》风吹起的青色衣衫，夕阳里的温暖容颜，你比以前更加美丽，像盛开的花<br>——许巍《难忘的一天》'
         });
         d.show();
+        d.addEventListener('okClick',function(){console.log('second');return false;});
 
     });
 </script>

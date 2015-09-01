@@ -5,31 +5,52 @@
     <title></title>
     <link href="../dest/huadialog.css" rel="stylesheet"/>
     <script src="js/jquery-1.11.3.js"></script>
-    <script src="../src/huadialog.js"></script>
+    <script src="js/require.js"></script>
+
+    <!--<script src="../src/huadialog.js"></script>-->
 
 </head>
 <body style="background: red;">
 
 <script>
-    $(function(){
-        window.d=huadialog({
-            title:'弹出框',
-            width:'500',
-            locked:true,
-            ok:function(){
-                console.log('okClick');
-                return false;
-            },
-            cancel:function(){
-                console.log('cancelClick');
-                return false;
-            },
-            content:'风吹起的青色衣衫，夕阳里的温暖容颜，你比以前更加美丽，像盛开的花<br>——许巍《难忘的一天》风吹起的青色衣衫，夕阳里的温暖容颜，你比以前更加美丽，像盛开的花<br>——许巍《难忘的一天》风吹起的青色衣衫，夕阳里的温暖容颜，你比以前更加美丽，像盛开的花<br>——许巍《难忘的一天》'
+
+    requirejs.config({
+        baseUrl:'js',
+        paths:{
+            'jquery':'jquery-1.11.3',
+            'huadialog':'../../src/huadialog'
+        }
+    });
+    requirejs(['jquery','huadialog'],function($,dialog){
+        var $=require('jquery');
+        console.log($);
+        var d=dialog({
+            title:'弹窗口',
+            content:'nice to meet you,huadialog',
+            locked:true
         });
         d.show();
-        d.addEventListener('okClick',function(){console.log('second');return false;});
-
     });
+
+//    $(function(){
+//        window.d=huadialog({
+//            title:'弹出框',
+//            width:'500',
+//            locked:true,
+//            ok:function(){
+//                console.log('okClick');
+//                return false;
+//            },
+//            cancel:function(){
+//                console.log('cancelClick');
+//                return false;
+//            },
+//            content:''
+//        });
+//        d.show();
+//        d.addEventListener('okClick',function(){console.log('second');return false;});
+//
+//    });
 </script>
 </body>
 </html>

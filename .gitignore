@@ -5,6 +5,9 @@ logs
 #IDE
 .idea
 
+#bake
+.bake
+
 # Runtime data
 pids
 *.pid

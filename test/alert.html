@@ -9,13 +9,38 @@
     <script type="text/javascript" src="../src/huadialog.js"></script>
 </head>
 <body>
+<button id="only-content">noly content</button>
+<button id="locked">locked</button>
+<button id="zIndex">set zIndex</button>
 <script>
-    require.config({
-        baseUrl:'../js',
-
+    requirejs.config({
+        baseUrl:'js',
+        paths:{
+            'jquery':'jquery-1.11.3',
+            'huadialog':'../../src/huadialog'
+        },
+        shim:{
+            'huadialog':['jquery']
+        }
     });
-    $(function(){
-       huadialog.alert("你好");
+
+    requirejs(['jquery','huadialog'],function($,dialog){
+        $(function(){
+
+            $('#only-content').on('click',function(){
+                dialog.alert('nice to meet you,huadialog',false);
+            });
+
+            $('#locked').on('click',function(){
+                dialog.alert('nice to meet you,huadialog',true);
+            });
+
+            $('#zIndex').on('click',function(){
+                dialog.alert('nice to meet you,huadialog',true,2000);
+            });
+
+        });
+
     });
 </script>
 

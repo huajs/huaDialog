@@ -1,23 +1,30 @@
 //noinspection BadExpressionStatementJS
-!(function(){
+!(function (factory) {
+
+    /**
+     * 支持模块输出 commonjs
+     * */
+    if(typeof module ==='object' && typeof module.exports === 'object'){
+            module.exports=factory();
+    }
+    else{
+        factory();
+    }
+
+}(function(){
     /*
      * 定义对话框对象
      * */
     var huadialog = function (options) {
-
         var options = $.extend(huadialog.defaultOptions, options);
+
+
         return new huadialog.create(options);
+    };
 
-  };
 
-    /**
-     * 支持模块输出
-     * */
-    if ( typeof define === "function" && (define.amd||define.cmd) ) {
-        define( "huadialog", [], function() {
-            return huadialog;
-        });
-    }
+
+
 
     /**
      * 提示（alert）弹出框
@@ -94,7 +101,7 @@
     //默认配置信息
     huadialog.defaultOptions = {
         //标题
-        title: 'title',
+        title: '消息',
 
         //内容
         content: '&nbsp;',
@@ -199,7 +206,7 @@
 
 
         _$().addClass('huadialog-show');
-        _$('title').text('title');
+        _$('title').text('提示');
 
         //隐藏取消按钮
         if (userOptions.type == 'alert') {
@@ -457,8 +464,14 @@
         }
     });
 
+    //模块输出
+    if ( typeof define === "function" && define.amd ) {
+        define( "huadialog", [], function() {
+            return huadialog;
+        });
+    }
 
     window.huadialog = huadialog;
     return huadialog;
 
-}());
+}));

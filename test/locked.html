@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="../dest/huadialog.css" rel="stylesheet"/>
-    <script src="js/jquery-1.11.3.js"></script>
     <script src="js/require.js"></script>
 
     <!--<script src="../src/huadialog.js"></script>-->
 
 </head>
-<body style="background: red;">
+<body>
 
 <script>
 
@@ -19,11 +18,12 @@
         paths:{
             'jquery':'jquery-1.11.3',
             'huadialog':'../../src/huadialog'
+        },
+        shim:{
+            'huadialog':['jquery']
         }
     });
-    requirejs(['jquery','huadialog'],function($,dialog){
-        var $=require('jquery');
-        console.log($);
+    requirejs(['huadialog'],function(dialog){
         var d=dialog({
             title:'弹窗口',
             content:'nice to meet you,huadialog',

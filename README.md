@@ -6,7 +6,7 @@
 同时用户也可以自定义弹出框的样式.当然你也可以下载源码自行扩展.
 
 
-##三种基本弹出框
+##三种基本弹出框 
 ###huadialog.alert(string[,isLocked,zIndex]) 
 ```javascript
   huadialog.alert('nice to meet you,huadialog!');
@@ -72,3 +72,59 @@ zIndex:1000
 });
 
 ```
+##自定义弹出框
+##options
+`title`   
+标题设置 [String]  默认:title  
+
+`content`  
+弹框内容 [String|htmlObject]  
+
+`width`  
+弹框宽度[String]  默认:auto  
+
+`height`  
+弹框高度 [String] 默认:auto  
+
+`backdropBackground`  
+弹框背景的背景色  [String]   默认：#000  
+
+`backgroundOpacity`   
+弹框背景的透明度  [String]  默认：0.3  
+
+`locked`    
+是否显示弹出背景  [Boolean] 默认：false  
+
+`statusbar`
+状态栏信息 [String | HtmlObject]  
+
+`ok`  
+确认按钮回调方法 [Function]  
+
+`cancel`  
+取消按钮回调方法 [Function]  
+
+`okValue`  
+确定按钮文本值  [String]  
+
+`cancelValue`  
+取消按钮文本值  [String]  
+
+`closeBtn`  
+是否显示关闭按钮  [String]  
+
+`zIndex`  
+css中z-index值 [Number]
+
+
+
+
+
+
+
+
+
+
+
+##methods
+

@@ -7,12 +7,68 @@
 
 
 ##三种基本弹出框
-  `alert`  
+###huadialog.alert(string[,isLocked,zIndex]) 
 ```javascript
   huadialog.alert('nice to meet you,huadialog!');
+  
   huadialog.alert('nice to meet you,huadialog!',true);
+  
   huadialog.alert('nice to meet you,huadialog!',true,1000);
+  
+  huadialog.alert({
+  string:'nice to meet you,huadialog!',
+  isLocked:false,
+  zIndex:1000
+  });
 ```
-`confirm`
+
+###huadialog.confirm(string[, ok, cancel, isLocked, zIndex])
 ```javascript
-dialog.confirm
+huadialog.confirm(
+'good morning!Are you OK?',
+function(){
+console.log('ok click!');
+},
+function(){
+console.log('you clicked cancel!');
+}
+);
+
+huadialog.confirm({
+string:'good morning! Are you OK?',
+ok:function(){
+console.log('you clicked ok!');
+},
+cancel:function(){
+console.log('you clicked cancel!');
+},
+isLocked:false,
+zIndex:1000
+});
+
+```
+###huadialog.prompt(string[, ok, cancel, isLocked, zIndex])
+```javascript
+huadialog.prompt(
+'type what you want!',
+function(str){
+console.log('user type string is:'+str);
+},
+function(){
+console.log('you clicked cancel!');
+}
+);
+
+huadialog.confirm({
+string:'type what you want!',
+ok:function(str){
+console.log('user type string is:'+str);
+},
+cancel:function(){
+console.log('you clicked cancel!');
+},
+isLocked:false,
+zIndex:1000
+});
+
+```

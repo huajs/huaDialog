@@ -116,15 +116,45 @@ zIndex:1000
 `zIndex`  
 css中z-index值 [Number]
 
-
-
-
-
-
-
-
-
-
-
 ##methods
+`show()` `title()` `conent()` `width()` `height()` `statusbar()` `backdropBackground()` `backdropOpacity()` `closeBrn()`
+`ok()` `cancel` `okValue` `cancelValue` `close()` `remove()`  
+```javascript
+var dialog=new huadialog({
+title:'title',
+content:'hello,huadialog!'
+});
+//显示弹出框
+dialog.show();
+
+//设置宽度
+dialog.width('300px');
+
+//关闭文本框
+dialog.close();
+
+//移除文本框
+dialog.remove();
+
+```
+##event
+`show` `close` `remove` `okClick` `cancelClick`  
+```javascript
+var dialog=new 
+var dialog=new huadialog({
+title:'title',
+content:'hello,huadialog!'
+});
+dialog.show();
+
+dialog.addEventListener('show',function(){
+console.log('dialog show');
+});
+
+dialog.addEventListener('close',function(){
+console.log('dialog closed!');
+});
+```
+
+
 

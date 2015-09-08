@@ -23,7 +23,7 @@
   "dependencies": {
     "jquery": "*"
   },
-  "dependencies":{
+  "devDependencies":{
     "grunt-cli":"*",
     "grunt":"*",
     "grunt-autoprefixer":"*",
